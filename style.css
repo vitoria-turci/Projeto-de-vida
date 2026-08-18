@@ -49,6 +49,7 @@ body {
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
+    cursor: pointer;
 }
 
 .botao:first-child {
@@ -57,6 +58,7 @@ body {
 
 .botoes {
     display: block;
+    width: 100%;
 }
 
 .botao.ativo {
@@ -68,6 +70,8 @@ body {
     background-color: var(--texto-fundo);
     padding: 40px;
     border-radius: 0 0 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .aba-conteudo.ativo {
