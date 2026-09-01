@@ -67,6 +67,7 @@ body {
     border-top: none;
 
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .botao:hover {
@@ -82,7 +83,7 @@ body {
     border-radius: 40px 40px 0 0;
 }
 
-/* CONTEÚDO */
+/* ÁREA DOS OBJETIVOS */
 
 .abas-textos {
     background-color: var(--texto-fundo);
@@ -102,61 +103,46 @@ body {
 .aba-conteudo-titulo-principal {
     font-size: 28px;
     text-align: center;
-    margin-bottom: 30px;
-}
-
-.aba-conteudo-titulo-secundario {
-    text-align: center;
-    color: var(--verde);
-    text-transform: uppercase;
+    margin: 0 0 30px 0;
 }
 
 /* OBJETIVOS */
 
+.objetivos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 .objetivo {
-    background-color: rgba(30, 30, 30, 0.5);
-    border: 1px solid rgba(111, 255, 87, 0.2);
+    background-color: rgba(30, 30, 30, 0.6);
+    border: 2px solid var(--botao-ativo);
     border-radius: 20px;
 
-    padding: 20px;
-    margin-bottom: 25px;
+    padding: 25px;
+
+    min-height: 150px;
 
     transition: 0.3s;
 }
 
 .objetivo:hover {
     border-color: var(--verde);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 .objetivo h4 {
+    color: var(--verde);
     font-size: 22px;
     text-align: center;
-    margin-top: 0;
+    margin: 0 0 15px 0;
 }
 
-/* CONTADOR */
-
-.contador {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contador-digito {
-    padding: 0 16px;
+.objetivo p {
+    color: var(--branco);
+    font-size: 17px;
     text-align: center;
-    min-width: 100px;
-}
-
-.contador-digito-numero {
-    font-size: 60px;
-    margin: 0;
-}
-
-.contador-digito-texto {
-    color: var(--verde);
-    font-size: 18px;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -175,15 +161,11 @@ body {
     .botao:last-child {
         border-radius: 0 40px 0 0;
     }
-
-    .objetivo {
-        padding: 25px;
-    }
 }
 
 /* CELULAR */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     body {
         padding: 10px;
@@ -197,11 +179,19 @@ body {
         padding: 20px;
     }
 
-    .contador-digito-numero {
-        font-size: 45px;
+    .objetivos {
+        grid-template-columns: 1fr;
+    }
+
+    .objetivo {
+        min-height: auto;
     }
 
     .objetivo h4 {
-        font-size: 18px;
+        font-size: 19px;
+    }
+
+    .objetivo p {
+        font-size: 16px;
     }
 }
