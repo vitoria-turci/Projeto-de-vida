@@ -26,8 +26,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     max-width: 1200px;
     width: 100%;
+
     margin: 0 auto;
 }
 
@@ -41,7 +43,10 @@ body {
     color: var(--verde);
 }
 
-/* BOTÕES */
+
+/* =========================
+   BOTÕES
+========================= */
 
 .botoes {
     display: flex;
@@ -50,6 +55,7 @@ body {
 
 .botao {
     font-family: 'Chakra Petch', sans-serif;
+
     background-color: var(--botao-inativo);
     color: var(--branco);
 
@@ -57,16 +63,17 @@ body {
     justify-content: center;
     align-items: center;
 
-    padding: 1em;
+    padding: 20px 10px;
+
     font-size: 18px;
+
     width: 25%;
 
+    border: none;
     border-bottom: 4px solid var(--botao-ativo);
-    border-left: 2px solid var(--botao-ativo);
-    border-right: 2px solid var(--botao-ativo);
-    border-top: none;
 
     cursor: pointer;
+
     transition: 0.3s;
 }
 
@@ -87,12 +94,18 @@ body {
     border-radius: 0 40px 0 0;
 }
 
-/* ÁREA DOS OBJETIVOS */
+
+/* =========================
+   ÁREA DOS CONTEÚDOS
+========================= */
 
 .abas-textos {
     background-color: var(--texto-fundo);
+
     padding: 40px;
+
     border-radius: 0 0 40px 40px;
+
     width: 100%;
 }
 
@@ -107,49 +120,71 @@ body {
 .aba-conteudo-titulo-principal {
     font-size: 28px;
     text-align: center;
-    margin: 0 0 30px 0;
+
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
-/* OBJETIVOS */
+
+/* =========================
+   OBJETIVOS
+========================= */
 
 .objetivos {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 20px;
 }
 
 .objetivo {
-    background-color: rgba(30, 30, 30, 0.6);
+    background-color: rgba(30, 30, 30, 0.7);
+
     border: 2px solid var(--botao-ativo);
+
     border-radius: 20px;
 
     padding: 25px;
-    min-height: 150px;
+
+    min-height: 160px;
 
     transition: 0.3s;
 }
 
 .objetivo:hover {
     border-color: var(--verde);
+
     transform: translateY(-5px);
 }
 
 .objetivo h4 {
     color: var(--verde);
+
     font-size: 22px;
+
     text-align: center;
-    margin: 0 0 15px 0;
+
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .objetivo p {
     color: var(--branco);
+
     font-size: 17px;
+
     text-align: center;
+
     line-height: 1.5;
+
     margin: 0;
 }
 
-/* CELULAR */
+
+/* =========================
+   CELULAR
+========================= */
 
 @media screen and (max-width: 700px) {
 
@@ -167,15 +202,12 @@ body {
 
     .botao {
         width: 100%;
+
         border-radius: 0 !important;
     }
 
     .botao:first-child {
         border-radius: 40px 40px 0 0 !important;
-    }
-
-    .botao:last-child {
-        border-radius: 0 0 0 0 !important;
     }
 
     .abas-textos {

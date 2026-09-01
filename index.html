@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Meus Objetivos do Ano</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,18 +18,34 @@
             Meus Objetivos do Ano<span>_</span>
         </h2>
 
+        <!-- BOTÕES -->
         <div class="botoes">
 
-            <button class="botao ativo">Passar de ano</button>
-            <button class="botao">Ter notas boas</button>
-            <button class="botao">Criar um portfólio</button>
-            <button class="botao">Currículo</button>
+            <button class="botao ativo" onclick="mostrarAba(0)">
+                Passar de ano
+            </button>
+
+            <button class="botao" onclick="mostrarAba(1)">
+                Ter notas boas
+            </button>
+
+            <button class="botao" onclick="mostrarAba(2)">
+                Criar um portfólio
+            </button>
+
+            <button class="botao" onclick="mostrarAba(3)">
+                Currículo
+            </button>
 
         </div>
 
+
+        <!-- CONTEÚDOS -->
+
         <div class="abas-textos">
 
-            <!-- BOTÃO 1 -->
+            <!-- PASSAR DE ANO -->
+
             <div class="aba-conteudo ativo">
 
                 <h3 class="aba-conteudo-titulo-principal">
@@ -61,7 +79,8 @@
             </div>
 
 
-            <!-- BOTÃO 2 -->
+            <!-- TER NOTAS BOAS -->
+
             <div class="aba-conteudo">
 
                 <h3 class="aba-conteudo-titulo-principal">
@@ -95,7 +114,8 @@
             </div>
 
 
-            <!-- BOTÃO 3 -->
+            <!-- CRIAR PORTFÓLIO -->
+
             <div class="aba-conteudo">
 
                 <h3 class="aba-conteudo-titulo-principal">
@@ -129,7 +149,8 @@
             </div>
 
 
-            <!-- BOTÃO 4 -->
+            <!-- CURRÍCULO -->
+
             <div class="aba-conteudo">
 
                 <h3 class="aba-conteudo-titulo-principal">
@@ -150,7 +171,7 @@
 
                     <div class="objetivo">
                         <h4>Adicionar meus conhecimentos</h4>
-                        <p>Colocar minhas habilidades e tecnologias que conheço.</p>
+                        <p>Colocar minhas habilidades e tecnologias.</p>
                     </div>
 
                     <div class="objetivo">
@@ -166,7 +187,42 @@
 
     </section>
 
-    <script src="main.js"></script>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function mostrarAba(numero) {
+
+            // Pega todos os botões
+            const botoes = document.querySelectorAll(".botao");
+
+            // Pega todos os conteúdos
+            const abas = document.querySelectorAll(".aba-conteudo");
+
+
+            // Remove "ativo" de todos os botões
+            botoes.forEach(function(botao) {
+                botao.classList.remove("ativo");
+            });
+
+
+            // Remove "ativo" de todos os conteúdos
+            abas.forEach(function(aba) {
+                aba.classList.remove("ativo");
+            });
+
+
+            // Ativa o botão clicado
+            botoes[numero].classList.add("ativo");
+
+
+            // Mostra o conteúdo correspondente
+            abas[numero].classList.add("ativo");
+
+        }
+
+    </script>
 
 </body>
 
