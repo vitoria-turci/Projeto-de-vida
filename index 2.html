@@ -179,25 +179,6 @@
                         <p>Manter minhas informações sempre atualizadas.</p>
                     </div>
 
-                    <!-- LINK PARA O CANVA -->
-
-                    <div class="objetivo objetivo-canva">
-
-                        <h4>Meu currículo no Canva</h4>
-
-                        <p>
-                            Acesse meu currículo completo no Canva.
-                        </p>
-
-                        <a
-                            href="COLE_AQUI_O_LINK_DO_SEU_CURRICULO_NO_CANVA"
-                            target="_blank"
-                            class="link-canva">
-                            Acessar currículo
-                        </a>
-
-                    </div>
-
                 </div>
 
             </div>
@@ -213,19 +194,30 @@
 
         function mostrarAba(numero) {
 
+            // Pega todos os botões
             const botoes = document.querySelectorAll(".botao");
+
+            // Pega todos os conteúdos
             const abas = document.querySelectorAll(".aba-conteudo");
 
+
+            // Remove "ativo" de todos os botões
             botoes.forEach(function(botao) {
                 botao.classList.remove("ativo");
             });
 
+
+            // Remove "ativo" de todos os conteúdos
             abas.forEach(function(aba) {
                 aba.classList.remove("ativo");
             });
 
+
+            // Ativa o botão clicado
             botoes[numero].classList.add("ativo");
 
+
+            // Mostra o conteúdo correspondente
             abas[numero].classList.add("ativo");
 
         }

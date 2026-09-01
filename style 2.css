@@ -183,45 +183,6 @@ body {
 
 
 /* =========================
-   LINK DO CANVA
-========================= */
-
-.objetivo-canva {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.link-canva {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 12px 25px;
-
-    background-color: var(--verde);
-
-    color: var(--cor-de-fundo);
-
-    text-decoration: none;
-
-    font-size: 17px;
-    font-weight: bold;
-
-    border-radius: 10px;
-
-    transition: 0.3s;
-}
-
-.link-canva:hover {
-    background-color: var(--branco);
-
-    transform: scale(1.05);
-}
-
-
-/* =========================
    CELULAR
 ========================= */
 
