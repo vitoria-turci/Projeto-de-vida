@@ -44,7 +44,7 @@ body {
 /* BOTÕES */
 
 .botoes {
-    display: block;
+    display: flex;
     width: 100%;
 }
 
@@ -59,7 +59,7 @@ body {
 
     padding: 1em;
     font-size: 18px;
-    width: 100%;
+    width: 25%;
 
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
@@ -80,7 +80,11 @@ body {
 }
 
 .botao:first-child {
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px 0 0 0;
+}
+
+.botao:last-child {
+    border-radius: 0 40px 0 0;
 }
 
 /* ÁREA DOS OBJETIVOS */
@@ -120,7 +124,6 @@ body {
     border-radius: 20px;
 
     padding: 25px;
-
     min-height: 150px;
 
     transition: 0.3s;
@@ -146,23 +149,6 @@ body {
     margin: 0;
 }
 
-/* COMPUTADOR */
-
-@media screen and (min-width: 768px) {
-
-    .botoes {
-        display: flex;
-    }
-
-    .botao:first-child {
-        border-radius: 40px 0 0 0;
-    }
-
-    .botao:last-child {
-        border-radius: 0 40px 0 0;
-    }
-}
-
 /* CELULAR */
 
 @media screen and (max-width: 700px) {
@@ -175,16 +161,29 @@ body {
         font-size: 26px;
     }
 
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botao {
+        width: 100%;
+        border-radius: 0 !important;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 40px 0 0 !important;
+    }
+
+    .botao:last-child {
+        border-radius: 0 0 0 0 !important;
+    }
+
     .abas-textos {
         padding: 20px;
     }
 
     .objetivos {
         grid-template-columns: 1fr;
-    }
-
-    .objetivo {
-        min-height: auto;
     }
 
     .objetivo h4 {
